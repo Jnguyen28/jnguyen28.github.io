@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>Contact Me</title>
+<title>Projects</title>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,17 +7,17 @@
 
 @font-face {
     font-family: Hattori;
-    src: url("Fonts/Hattori_Hanzo.otf");
+    src: url("fonts/Hattori_Hanzo.otf");
 }
     
 @font-face {
     font-family: Cicle;
-    src: url("Fonts/Cicle_Fina.ttf");
+    src: url("fonts/Cicle_Fina.ttf");
 }
 
 @font-face {
     font-family: Quicksand;
-    src: url("Fonts/Quicksand-Bold.otf");
+    src: url("fonts/Quicksand-bold.otf");
 }
     
 body {
@@ -46,37 +46,22 @@ n {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
-    height: 4em;
 }
 
 .topnav a {
     float: left;
+    display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 1em 1em;
+    padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     font-family: "Hattori", Helvetica,Arial, sans-serif;
 }
 
-.topnav a:after {
-    content: '';
-    left: 0;
-    display: inline-block;
-    height: 10px;
-    width: 100%;
-    border-top: 1px solid;
-    opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: scale(0,1);
-	transform: scale(0,1);
-}
-
-.topnav a:hover:after {
-  opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
 }
     
 /* Add an active class to highlight the current page */
@@ -94,7 +79,7 @@ n {
     display: none;
 }
     
-/*@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -115,11 +100,6 @@ n {
     text-align: left;
   }
 }
-*/
-
-.alignCenter{
-
-}
     
 .main {
   padding-left: 2em;
@@ -132,34 +112,20 @@ n {
 <body>
 
 <div class="topnav" id="myTopnav">
-    <a href="index.html"><n></n>Home</a>
+    <a href="main.html"><n></n>Home</a>
     <a href="about.html"><n></n>About</a>
-    <a href="projects.html"><n></n>Projects</a>
-    <a class="active" href="contact.html"><n></n>Contact</a>
-    <topnav style = "float:right"><a href="main.html"><n>Jonathan Nguyen</n></a></topnav>
+    <a class="active" href="projects.html"><n></n>Projects</a>
+    <a href="contact.html"><n></n>Contact</a>
+    <topnav style = "float:right", "font-size: 50px"><a href="main.html"><n>Jonathan Nguyen</n></a></topnav>
     <a href="javascript:void(0);" class="icon" onclick="navFunction()">&#9776;</a>
 </div>
 
 <div class="main">
-    <h2>Contact me</h2>
-    
-    <br>
-
-    <form action="mailto:jonathan_nguyen_@hotmail.com" method="post" enctype="text/plain">
-        <h3>E-mail</h3>
-        Name:<br>
-        <input type="text" name="name"><br>
-        E-mail:<br>
-        <input type="text" name="mail"><br>
-        Message:<br>
-        <input type="text" name="comment" size="50"><br><br>
-        <input type="submit" value="Send">
-    </form>
+    <h2>Past Projects</h2>
     <br>
     <br>
-    <h3>Where to find me</h3>
-    <div id="map"  style="width:400px;height:400px;background:yellow"></div>
-
+    <br>
+    <h3><p style ="text-align: center">2018</p></h3>
 </div>
     
 <script>
@@ -173,18 +139,6 @@ function navFunction() {
     }
 }
 </script>
-
-<script>
-function myMap() {
-var mapOptions = {
-    center: new google.maps.LatLng(49.9185466,-97.2123604),
-    zoom: 15
-}
-var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-}
-</script>
-    
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg3dtcwoA-tHiAMeqZAlAELLqQc0dAr_I&callback=myMap"></script>
 
 </body>
 </html>

@@ -82,22 +82,37 @@ n {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
+    height: 4em;
 }
 
 .topnav a {
     float: left;
-    display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1em 1em;
     text-decoration: none;
     font-size: 17px;
     font-family: "Hattori", Helvetica,Arial, sans-serif;
 }
 
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
+.topnav a:after {
+    content: '';
+    left: 0;
+    display: inline-block;
+    height: 10px;
+    width: 100%;
+    border-top: 1px solid;
+    opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+.topnav a:hover:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
 }
     
 /* Add an active class to highlight the current page */
@@ -120,7 +135,7 @@ n {
     display: none;
 }
     
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -141,7 +156,7 @@ n {
     text-align: left;
   }
 }
-    
+*/  
     
 </style>
 </head>
@@ -149,11 +164,11 @@ n {
 <body>
 
 <div class="topnav" id="myTopnav">
-    <a href="main.html"><n></n>Home</a>
+    <a href="index.html"><n></n>Home</a>
     <a class="active" href="about.html"><n></n>About</a>
     <a href="projects.html"><n></n>Projects</a>
     <a href="contact.html"><n></n>Contact</a>
-    <topnav style = "float:right"><a href="main.html"><n>Jonathan Nguyen</n></a></topnav>
+    <topnav style = "float:right"><a href="index.html"><n>Jonathan Nguyen</n></a></topnav>
     <a href="javascript:void(0);" class="icon" onclick="navFunction()">&#9776;</a>
 </div>
 
